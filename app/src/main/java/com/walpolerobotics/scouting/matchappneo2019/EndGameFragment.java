@@ -89,30 +89,10 @@ public class EndGameFragment extends Fragment {
         in.numFouls = 0;
         in.playedDefense = false;
 
-        // TODO: Make string building code more efficient
-        StringBuilder sb = new StringBuilder();
-        if (mBrokenHcInput.isChecked()) {
-            sb.append("brokenHatchCollector");
-        }
-        if (mBrokenCcInput.isChecked()) {
-            if (sb.length() > 0) {
-                sb.append("-");
-            }
-            sb.append("brokenCargoCollector");
-        }
-        if (mBrokenDriveInput.isChecked()) {
-            if (sb.length() > 0) {
-                sb.append("-");
-            }
-            sb.append("brokenDriveTrain");
-        }
-        if (mBrokenClimbInput.isChecked()) {
-            if (sb.length() > 0) {
-                sb.append("-");
-            }
-            sb.append("brokenClimber");
-        }
-        in.robotCondition = sb.toString();
+        in.brokenHatchCollector = mBrokenHcInput.isChecked();
+        in.brokenCargoCollector = mBrokenCcInput.isChecked();
+        in.brokenDrivetrain = mBrokenDriveInput.isChecked();
+        in.brokenClimber = mBrokenClimbInput.isChecked();
 
         return in;
     }

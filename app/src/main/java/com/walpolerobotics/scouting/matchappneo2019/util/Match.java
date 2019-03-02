@@ -43,6 +43,9 @@ public class Match {
 
     public int numFouls;
     public boolean playedDefense;
-    public String robotCondition;
+    public boolean brokenHatchCollector;
+    public boolean brokenCargoCollector;
+    public boolean brokenDrivetrain;
+    public boolean brokenClimber;
 
 }

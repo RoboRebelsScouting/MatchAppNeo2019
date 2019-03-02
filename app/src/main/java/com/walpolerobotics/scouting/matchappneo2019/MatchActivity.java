@@ -177,7 +177,13 @@ public class MatchActivity extends AppCompatActivity implements EndGameFragment.
                         os.print(',');
                         os.print(matchData.playedDefense);
                         os.print(',');
-                        os.println(matchData.robotCondition);
+                        os.print(matchData.brokenHatchCollector);
+                        os.print(',');
+                        os.print(matchData.brokenCargoCollector);
+                        os.print(',');
+                        os.print(matchData.brokenDrivetrain);
+                        os.print(',');
+                        os.println(matchData.brokenClimber);
 
                         os.close();
 
