@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SandstormFragment">
+
+    <TextView
+        android:id="@+id/tcscLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tcsc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/tcscInput"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcscLabel" />
+
+    <TextView
+        android:id="@+id/tcr1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tcr1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcscInput" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/tcr1Input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcr1Label" />
+
+    <TextView
+        android:id="@+id/tcr2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tcr2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcr1Input" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/tcr2Input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcr2Label" />
+
+    <TextView
+        android:id="@+id/tcr3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tcr3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcr2Input" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/tcr3Input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcr3Label" />
+
+    <TextView
+        android:id="@+id/tcshLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tcsh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcr3Input" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/tcshInput"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcshLabel" />
+
+    <TextView
+        android:id="@+id/thr1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thr1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcshInput" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/thr1Input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thr1Label" />
+
+    <TextView
+        android:id="@+id/thr2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thr2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thr1Input" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/thr2Input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thr2Label" />
+
+    <TextView
+        android:id="@+id/thr3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thr3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thr2Input" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/thr3Input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thr3Label" />
+
+</android.support.constraint.ConstraintLayout>

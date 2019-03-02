@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".EndGameFragment">
+
+    <TextView
+        android:id="@+id/habClimbInputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hab_climb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/habClimbInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/habClimbInputLabel">
+
+        <RadioButton
+            android:id="@+id/habClimbRadioNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/none" />
+
+        <RadioButton
+            android:id="@+id/habClimbRadioL1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hab_l1" />
+
+        <RadioButton
+            android:id="@+id/habClimbRadioL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hab_l2" />
+
+        <RadioButton
+            android:id="@+id/habClimbRadioL3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hab_l3" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/robotConditionInputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/robot_condition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/habClimbInput" />
+
+    <LinearLayout
+        android:id="@+id/robotConditionInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/robotConditionInputLabel">
+
+        <CheckBox android:id="@+id/brokenHc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/broken_hc" />
+
+        <CheckBox android:id="@+id/brokenCc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/broken_cc" />
+
+        <CheckBox android:id="@+id/brokenDrive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/broken_drive" />
+
+        <CheckBox android:id="@+id/brokenClimb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/broken_climb" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robotConditionInput"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

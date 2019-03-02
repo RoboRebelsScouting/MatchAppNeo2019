@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">MatchAppNeo2019</string>
+
+    <string name="begin">Begin</string>
+    <string name="submit">Submit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="no">No</string>
+    <string name="none">None</string>
+
+    <string name="hab_input">Crossed baseline?</string>
+    <string name="hab_l1">HAB Level 1</string>
+    <string name="hab_l2">HAB Level 2</string>
+    <string name="hab_l3">HAB Level 3</string>
+
+    <string name="c_up">Cargo Picked Up</string>
+    <string name="c_down">Cargo Dropped</string>
+    <string name="h_up">Hatches Picked Up</string>
+    <string name="h_down">Hatches Dropped</string>
+
+    <string name="scsc">Sandstorm Cargo Ship Cargo</string>
+    <string name="scr1">Sandstorm Cargo R1</string>
+    <string name="scr2">Sandstorm Cargo R2</string>
+    <string name="scr3">Sandstorm Cargo R3</string>
+    <string name="scsh">Sandstorm Cargo Ship Hatch</string>
+    <string name="shr1">Sandstorm Hatch R1</string>
+    <string name="shr2">Sandstorm Hatch R2</string>
+    <string name="shr3">Sandstorm Hatch R3</string>
+
+    <string name="tcsc">Teleop Cargo Ship Cargo</string>
+    <string name="tcr1">Teleop Cargo R1</string>
+    <string name="tcr2">Teleop Cargo R2</string>
+    <string name="tcr3">Teleop Cargo R3</string>
+    <string name="tcsh">Teleop Cargo Ship Hatch</string>
+    <string name="thr1">Teleop Hatch R1</string>
+    <string name="thr2">Teleop Hatch R2</string>
+    <string name="thr3">Teleop Hatch R3</string>
+
+    <string name="hab_climb">HAB Climb</string>
+
+    <string name="robot_condition">Robot Condition</string>
+    <string name="broken_hc">Broken Hatch Collector</string>
+    <string name="broken_cc">Broken Cargo Collector</string>
+    <string name="broken_drive">Broken Drivetrain</string>
+    <string name="broken_climb">Broken Climber</string>
+
+</resources>
