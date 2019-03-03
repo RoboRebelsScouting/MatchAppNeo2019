@@ -5,7 +5,15 @@ public class Match {
     public int matchNumber;
     public int robotNumber;
     public int eventNumber;
-    public String scouterName = "Water Boy";
+    public String scouterName;
+
+    public static final int BLUE_1 = 0;
+    public static final int BLUE_2 = 1;
+    public static final int BLUE_3 = 2;
+    public static final int RED_1 = 3;
+    public static final int RED_2 = 4;
+    public static final int RED_3 = 5;
+
     public int startingPosition;
 
     public static final int HAB_NONE = 0;
@@ -35,9 +43,10 @@ public class Match {
     public int thr2;
     public int thr3;
 
-    public static final int CLIMB_L1 = 0;
-    public static final int CLIMB_L2 = 0;
-    public static final int CLIMB_L3 = 0;
+    public static final int CLIMB_NONE = 0;
+    public static final int CLIMB_L1 = 1;
+    public static final int CLIMB_L2 = 2;
+    public static final int CLIMB_L3 = 3;
 
     public int climb;
 
@@ -47,5 +56,13 @@ public class Match {
     public boolean brokenCargoCollector;
     public boolean brokenDrivetrain;
     public boolean brokenClimber;
+
+    public static int getStartingPosition(int alliance, int position) {
+        return (alliance * 3) + position;
+    }
+
+    public static int[] getStartingPosition(int position) {
+        return new int[]{position / 3, position % 3};
+    }
 
 }

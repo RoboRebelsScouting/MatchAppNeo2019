@@ -1,5 +1,7 @@
 package com.walpolerobotics.scouting.matchappneo2019;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
@@ -18,6 +20,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import static com.walpolerobotics.scouting.matchappneo2019.MainActivity.SHARED_PREFERENCES_NAME;
 
 public class MatchActivity extends AppCompatActivity implements EndGameFragment.OnSubmitClickedListener {
 
@@ -98,6 +102,16 @@ public class MatchActivity extends AppCompatActivity implements EndGameFragment.
     }
 
     public Match populateMatchData(Match in) {
+        // Read in some global variables from SharedPreferences
+        SharedPreferences prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, MODE_PRIVATE);
+        in.matchNumber = prefs.getInt("matchNumber", 1);
+        in.scouterName = prefs.getString("scouterName", "");
+        int alliance = prefs.getInt("robotAlliance", 0);
+        int position = prefs.getInt("robotPosition", 0);
+        in.startingPosition = Match.getStartingPosition(alliance, position);
+
+        in.robotNumber = getIntent().getIntExtra("robotNumber", 0);
+
         in.cargoPickedUp = mCUpInput.getValue();
         in.cargoDropped = mCDownInput.getValue();
         in.hPickedUp = mHUpInput.getValue();
@@ -202,7 +216,17 @@ public class MatchActivity extends AppCompatActivity implements EndGameFragment.
         }
 
         protected void onPostExecute(Boolean result) {
+            if (result) {
+                // Increment match number by 1
+                SharedPreferences prefs = getSharedPreferences(SHARED_PREFERENCES_NAME,
+                        MODE_PRIVATE);
+                int currentMatchNumber = prefs.getInt("matchNumber", 0);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("matchNumber", currentMatchNumber + 1);
+                editor.apply();
 
+                startActivity(new Intent(MatchActivity.this, MainActivity.class));
+            }
         }
     }
 }
