@@ -23,7 +23,8 @@ import java.io.PrintWriter;
 
 import static com.walpolerobotics.scouting.matchappneo2019.MainActivity.SHARED_PREFERENCES_NAME;
 
-public class MatchActivity extends AppCompatActivity implements EndGameFragment.OnSubmitClickedListener {
+public class MatchActivity extends AppCompatActivity
+        implements EndGameFragment.OnSubmitClickedListener {
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
@@ -126,8 +127,8 @@ public class MatchActivity extends AppCompatActivity implements EndGameFragment.
             Match matchData = matchDataIn[0];
             String state = Environment.getExternalStorageState();
             if (Environment.MEDIA_MOUNTED.equals(state)) {
-                // TODO: Change hardcoded event and tablet filters
-                File dataFile = MatchFile.getCurrentMatchFile("TEST", "GREEN1");
+                String position = Match.getPositionDescriptor(matchData.startingPosition);
+                File dataFile = MatchFile.getCurrentMatchFile("TEST", position);
                 if (dataFile != null) {
                     try {
                         PrintWriter os = new PrintWriter(new FileWriter(dataFile, true));
