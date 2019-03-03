@@ -23,6 +23,10 @@
     <string name="robot_number_input">Robot Number</string>
     <string name="scouter_name_input">Scouter Name</string>
 
+    <string name="match_number_error">Please enter a Match Number</string>
+    <string name="robot_number_error">Please enter a Robot Number</string>
+    <string name="scouter_name_error">Please enter your name</string>
+
     <string name="hab_input">Crossed baseline?</string>
     <string name="hab_l1">HAB Level 1</string>
     <string name="hab_l2">HAB Level 2</string>
@@ -58,5 +62,7 @@
     <string name="broken_cc">Broken Cargo Collector</string>
     <string name="broken_drive">Broken Drivetrain</string>
     <string name="broken_climb">Broken Climber</string>
+
+    <string name="splash_message">&#128515;\nMade in Walpole, Massachusetts by Team 1153</string>
 
 </resources>
