@@ -8,6 +8,11 @@
     <string name="no">No</string>
     <string name="none">None</string>
 
+    <string name="sandstorm">Sandstorm</string>
+    <string name="teleop">Tele-Op</string>
+    <string name="end_game">End Game</string>
+    <string name="match_global">Match Global</string>
+
     <string name="alliance_blue">Blue Alliance</string>
     <string name="alliance_red">Red Alliance</string>
     <string name="position_1">1</string>

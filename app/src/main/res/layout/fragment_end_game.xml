@@ -7,12 +7,20 @@
     tools:context=".EndGameFragment">
 
     <TextView
+        android:id="@+id/endGameHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/end_game"
+        style="?android:attr/listSeparatorTextViewStyle"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
         android:id="@+id/habClimbInputLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hab_climb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/endGameHeader" />
 
     <RadioGroup
         android:id="@+id/habClimbInput"
