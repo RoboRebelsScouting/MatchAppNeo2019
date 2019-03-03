@@ -39,6 +39,6 @@ public class MatchFileFilter implements FileFilter {
             return false;
         }
 
-        return values[0].equals("nmd") && extension.equals("csv");
+        return values[0].equalsIgnoreCase("nmd") && extension.equalsIgnoreCase("csv");
     }
 }
