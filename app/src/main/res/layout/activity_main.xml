@@ -86,6 +86,7 @@
                             android:id="@+id/scouterNameInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/scouter_name_input"
                             android:singleLine="true" />
 
