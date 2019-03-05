@@ -4,7 +4,7 @@ public class Match {
 
     public int matchNumber;
     public int robotNumber;
-    public int eventNumber;
+    public String eventName;
     public String scouterName;
 
     public static final String[] POSITION_DESCRIPTORS = new String[] {"BLUE1", "BLUE2", "BLUE3",

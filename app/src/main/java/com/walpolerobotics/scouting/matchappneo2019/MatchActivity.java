@@ -106,6 +106,8 @@ public class MatchActivity extends AppCompatActivity
         // Read in some global variables from SharedPreferences
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, MODE_PRIVATE);
         in.matchNumber = prefs.getInt("matchNumber", 1);
+        // TODO: Remove event hardcoding
+        in.eventName = "SEMASS";
         in.scouterName = prefs.getString("scouterName", "");
         int alliance = prefs.getInt("robotAlliance", 0);
         int position = prefs.getInt("robotPosition", 0);
@@ -128,7 +130,7 @@ public class MatchActivity extends AppCompatActivity
             String state = Environment.getExternalStorageState();
             if (Environment.MEDIA_MOUNTED.equals(state)) {
                 String position = Match.getPositionDescriptor(matchData.startingPosition);
-                File dataFile = MatchFile.getCurrentMatchFile("TEST", position);
+                File dataFile = MatchFile.getCurrentMatchFile(matchData.eventName, position);
                 if (dataFile != null) {
                     try {
                         PrintWriter os = new PrintWriter(new FileWriter(dataFile, true));
@@ -138,7 +140,7 @@ public class MatchActivity extends AppCompatActivity
                         os.print(',');
                         os.print(matchData.robotNumber);
                         os.print(',');
-                        os.print(matchData.eventNumber);
+                        os.print(matchData.eventName);
                         os.print(',');
                         os.print(matchData.scouterName);
                         os.print(',');
