@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MatchActivity">
 
     <android.support.v7.widget.Toolbar
@@ -13,85 +14,91 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="560dp"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        android:layout_height="575dp" />
 
-    <TextView
-        android:id="@+id/matchGlobalHeader"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/match_global"
-        style="?android:attr/listSeparatorTextViewStyle"
-        app:layout_constraintTop_toBottomOf="@id/pager"/>
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding">
 
-    <TextView
-        android:id="@+id/cUpLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/c_up"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/matchGlobalHeader" />
+        <TextView
+            android:id="@+id/matchGlobalHeader"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/match_global"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
-        android:id="@+id/cUpInput"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cUpLabel" />
+        <TextView
+            android:id="@+id/cUpLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/c_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/matchGlobalHeader" />
 
-    <TextView
-        android:id="@+id/cDownLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/c_down"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cUpInput" />
+        <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+            android:id="@+id/cUpInput"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cUpLabel" />
 
-    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
-        android:id="@+id/cDownInput"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cDownLabel" />
+        <TextView
+            android:id="@+id/cDownLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/c_down"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cUpInput" />
 
-    <TextView
-        android:id="@+id/hUpLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/h_up"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cDownInput" />
+        <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+            android:id="@+id/cDownInput"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cDownLabel" />
 
-    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
-        android:id="@+id/hUpInput"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/hUpLabel" />
+        <TextView
+            android:id="@+id/hUpLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/h_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cDownInput" />
 
-    <TextView
-        android:id="@+id/hDownLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/h_down"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hUpInput" />
+        <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+            android:id="@+id/hUpInput"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hUpLabel" />
 
-    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
-        android:id="@+id/hDownInput"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/hDownLabel" />
+        <TextView
+            android:id="@+id/hDownLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/h_down"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hUpInput" />
 
-</android.support.constraint.ConstraintLayout>
+        <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+            android:id="@+id/hDownInput"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hDownLabel" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
