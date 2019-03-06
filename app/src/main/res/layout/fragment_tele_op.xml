@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcsc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/teleopHeader" />
 
@@ -37,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcsh"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tcscInput" />
 
@@ -85,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcr1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/tcshInput" />
 
@@ -101,6 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcr2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/tcr1Input" />
 
@@ -117,6 +121,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcr3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/tcr2Input" />
 
@@ -133,6 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/thr1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/tcr3Input" />
 
@@ -149,6 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/thr2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/thr1Input" />
 
@@ -165,6 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/thr3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/thr2Input" />
 

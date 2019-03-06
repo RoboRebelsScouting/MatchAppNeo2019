@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hab_input"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sandstormHeader" />
 
@@ -57,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scsc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/habInput" />
 
@@ -73,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scsh"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scscInput" />
 
@@ -122,6 +125,7 @@
         android:layout_height="wrap_content"
         android:gravity="bottom"
         android:text="@string/scr1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/scshInput" />
 
@@ -138,6 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scr2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/scr1Input" />
 
@@ -154,6 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scr3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/scr2Input" />
 
@@ -170,6 +176,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shr1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/scr3Input" />
 
@@ -186,6 +193,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shr2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/shr1Input" />
 
@@ -202,6 +210,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shr3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/shr2Input" />
 

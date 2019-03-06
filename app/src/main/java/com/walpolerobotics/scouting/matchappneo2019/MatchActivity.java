@@ -11,6 +11,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.walpolerobotics.scouting.matchappneo2019.util.Match;
 import com.walpolerobotics.scouting.matchappneo2019.util.MatchFile;
@@ -42,6 +43,9 @@ public class MatchActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         mPager = findViewById(R.id.pager);
         mPagerAdapter = new MatchPagerAdapter(getSupportFragmentManager());
