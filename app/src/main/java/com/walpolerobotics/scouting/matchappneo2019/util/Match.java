@@ -60,6 +60,9 @@ public class Match {
     public boolean brokenDrivetrain;
     public boolean brokenClimber;
 
+    public static final int ALLIANCE_BLUE = 0;
+    public static final int ALLIANCE_RED = 1;
+
     public static int getStartingPosition(int alliance, int position) {
         return (alliance * 3) + position;
     }

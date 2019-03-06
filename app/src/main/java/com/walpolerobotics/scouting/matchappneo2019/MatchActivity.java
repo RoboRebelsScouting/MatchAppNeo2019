@@ -2,6 +2,7 @@ package com.walpolerobotics.scouting.matchappneo2019;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.walpolerobotics.scouting.matchappneo2019.util.Match;
 import com.walpolerobotics.scouting.matchappneo2019.util.MatchFile;
@@ -26,6 +29,8 @@ import static com.walpolerobotics.scouting.matchappneo2019.MainActivity.SHARED_P
 
 public class MatchActivity extends AppCompatActivity
         implements EndGameFragment.OnSubmitClickedListener {
+
+    private Toolbar mToolbar;
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
@@ -44,8 +49,10 @@ public class MatchActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+        setThemeColors();
 
         mPager = findViewById(R.id.pager);
         mPagerAdapter = new MatchPagerAdapter(getSupportFragmentManager());
@@ -66,6 +73,30 @@ public class MatchActivity extends AppCompatActivity
         mEndGameFragment.populateMatchData(match);
 
         new SaveFileTask().execute(match);
+    }
+
+    private void setThemeColors() {
+        int primary;
+        int primaryDark;
+
+        Resources res = getResources();
+
+        SharedPreferences prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, MODE_PRIVATE);
+        int alliance = prefs.getInt("robotAlliance", 0);
+        if (alliance == Match.ALLIANCE_BLUE) {
+            primary = res.getColor(R.color.bluePrimary);
+            primaryDark = res.getColor(R.color.bluePrimaryDark);
+        } else {
+            primary = res.getColor(R.color.redPrimary);
+            primaryDark = res.getColor(R.color.redPrimaryDark);
+        }
+
+        mToolbar.setBackgroundColor(primary);
+
+        Window window = getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(primaryDark);
     }
 
     private class MatchPagerAdapter extends FragmentPagerAdapter {
