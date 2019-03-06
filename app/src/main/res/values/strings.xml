@@ -10,6 +10,9 @@
 
     <string name="robot_position_indicator">This tablet is assigned to scout %1$s</string>
 
+    <string name="rocket">Rocket</string>
+    <string name="cs">Cargo Ship</string>
+
     <string name="sandstorm">Sandstorm</string>
     <string name="teleop">Tele-Op</string>
     <string name="end_game">End Game</string>

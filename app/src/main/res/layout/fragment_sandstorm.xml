@@ -69,12 +69,61 @@
         app:layout_constraintTop_toTopOf="@+id/scscLabel" />
 
     <TextView
+        android:id="@+id/scshLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scsh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scscInput" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/scshInput"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scshLabel" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.view.VerticalTextView
+        android:id="@+id/rocketLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rocket"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scr1Label"
+        app:layout_constraintBottom_toBottomOf="@+id/shr3Label"/>
+
+    <ImageView
+        android:id="@+id/cargoIcon"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"
+        android:src="@drawable/ic_cargo"
+        app:layout_constraintStart_toEndOf="@id/rocketLabel"
+        app:layout_constraintTop_toTopOf="@+id/scr1Label"
+        app:layout_constraintBottom_toBottomOf="@+id/scr3Label"/>
+
+    <ImageView
+        android:id="@+id/hatchIcon"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"
+        android:src="@drawable/ic_hatch"
+        app:layout_constraintStart_toEndOf="@id/rocketLabel"
+        app:layout_constraintTop_toTopOf="@+id/shr1Label"
+        app:layout_constraintBottom_toBottomOf="@+id/shr3Label"/>
+
+    <TextView
         android:id="@+id/scr1Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="bottom"
         android:text="@string/scr1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scscInput" />
+        app:layout_constraintStart_toEndOf="@id/cargoIcon"
+        app:layout_constraintTop_toBottomOf="@+id/scshInput" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
         android:id="@+id/scr1Input"
@@ -89,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scr2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/scr1Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
@@ -105,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/scr3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/scr2Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
@@ -117,28 +166,12 @@
         app:layout_constraintTop_toTopOf="@+id/scr3Label" />
 
     <TextView
-        android:id="@+id/scshLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/scsh"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scr3Input" />
-
-    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
-        android:id="@+id/scshInput"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scshLabel" />
-
-    <TextView
         android:id="@+id/shr1Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shr1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scshInput" />
+        app:layout_constraintStart_toEndOf="@id/hatchIcon"
+        app:layout_constraintTop_toBottomOf="@+id/scr3Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
         android:id="@+id/shr1Input"
@@ -153,7 +186,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shr2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/shr1Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
@@ -169,7 +202,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/shr3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/shr2Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
