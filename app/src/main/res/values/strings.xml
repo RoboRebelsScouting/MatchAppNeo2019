@@ -43,22 +43,22 @@
     <string name="h_down">Hatches Dropped</string>
 
     <string name="scsc">Sandstorm Cargo Ship</string>
-    <string name="scr1">Sandstorm Cargo R1</string>
-    <string name="scr2">Sandstorm Cargo R2</string>
-    <string name="scr3">Sandstorm Cargo R3</string>
+    <string name="scr1">Level 1</string>
+    <string name="scr2">Level 2</string>
+    <string name="scr3">Level 3</string>
     <string name="scsh">Sandstorm Hatch Ship</string>
-    <string name="shr1">Sandstorm Hatch R1</string>
-    <string name="shr2">Sandstorm Hatch R2</string>
-    <string name="shr3">Sandstorm Hatch R3</string>
+    <string name="shr1">Level 1</string>
+    <string name="shr2">Level 2</string>
+    <string name="shr3">Level 3</string>
 
     <string name="tcsc">Teleop Cargo Ship</string>
-    <string name="tcr1">Teleop Cargo R1</string>
-    <string name="tcr2">Teleop Cargo R2</string>
-    <string name="tcr3">Teleop Cargo R3</string>
+    <string name="tcr1">Level 1</string>
+    <string name="tcr2">Level 2</string>
+    <string name="tcr3">Level 3</string>
     <string name="tcsh">Teleop Hatch Ship</string>
-    <string name="thr1">Teleop Hatch R1</string>
-    <string name="thr2">Teleop Hatch R2</string>
-    <string name="thr3">Teleop Hatch R3</string>
+    <string name="thr1">Level 1</string>
+    <string name="thr2">Level 2</string>
+    <string name="thr3">Level 3</string>
 
     <string name="hab_climb">HAB Climb</string>
 
