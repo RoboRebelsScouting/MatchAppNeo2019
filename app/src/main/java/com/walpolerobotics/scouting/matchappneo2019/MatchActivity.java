@@ -46,13 +46,12 @@ public class MatchActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.BlueAllianceTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
 
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-
-        setThemeColors();
 
         mPager = findViewById(R.id.pager);
         mPagerAdapter = new MatchPagerAdapter(getSupportFragmentManager());
@@ -75,28 +74,14 @@ public class MatchActivity extends AppCompatActivity
         new SaveFileTask().execute(match);
     }
 
-    private void setThemeColors() {
-        int primary;
-        int primaryDark;
-
-        Resources res = getResources();
-
+    private void setTheme() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, MODE_PRIVATE);
         int alliance = prefs.getInt("robotAlliance", 0);
         if (alliance == Match.ALLIANCE_BLUE) {
-            primary = res.getColor(R.color.bluePrimary);
-            primaryDark = res.getColor(R.color.bluePrimaryDark);
+            setTheme(R.style.BlueAllianceTheme);
         } else {
-            primary = res.getColor(R.color.redPrimary);
-            primaryDark = res.getColor(R.color.redPrimaryDark);
+            setTheme(R.style.RedAllianceTheme);
         }
-
-        mToolbar.setBackgroundColor(primary);
-
-        Window window = getWindow();
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(primaryDark);
     }
 
     private class MatchPagerAdapter extends FragmentPagerAdapter {
