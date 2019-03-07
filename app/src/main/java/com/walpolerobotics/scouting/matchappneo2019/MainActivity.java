@@ -7,10 +7,11 @@ import android.support.text.emoji.EmojiCompat;
 import android.support.text.emoji.bundled.BundledEmojiCompatConfig;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.walpolerobotics.scouting.matchappneo2019.util.Match;
 
@@ -24,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mRobotNumberInput;
     private TextInputLayout mScouterNameLayout;
     private EditText mScouterNameInput;
-    private RadioGroup mAllianceInput;
-    private RadioGroup mPositionInput;
+    private TextView mRobotPositionIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mRobotNumberInput = findViewById(R.id.robotInput);
         mScouterNameLayout = findViewById(R.id.scouterNameInputLayout);
         mScouterNameInput = findViewById(R.id.scouterNameInput);
-        mAllianceInput = findViewById(R.id.allianceInput);
-        mPositionInput = findViewById(R.id.positionInput);
+        mRobotPositionIndicator = findViewById(R.id.robotPositionIndicator);
 
         mRobotNumberInput.requestFocus();
     }
@@ -58,11 +57,12 @@ public class MainActivity extends AppCompatActivity {
         mMatchNumberInput.setText(String.valueOf(prefs.getInt("matchNumber", 1)));
         mScouterNameInput.setText(prefs.getString("scouterName", ""));
         int alliance = prefs.getInt("robotAlliance", 0);
-        RadioButton allianceRadioButton = (RadioButton) mAllianceInput.getChildAt(alliance);
-        allianceRadioButton.setChecked(true);
         int position = prefs.getInt("robotPosition", 0);
-        RadioButton positionRadioButton = (RadioButton) mPositionInput.getChildAt(position);
-        positionRadioButton.setChecked(true);
+        String robotPosition = Match.getPositionDescriptor(Match.getStartingPosition(alliance,
+                position));
+        String robotPositionIndicatorMessage = getResources()
+                .getString(R.string.robot_position_indicator, robotPosition);
+        mRobotPositionIndicator.setText(robotPositionIndicatorMessage);
     }
 
     @Override
@@ -80,14 +80,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String scouterName = mScouterNameInput.getText().toString();
-        int alliance = mAllianceInput.indexOfChild(findViewById(
-                mAllianceInput.getCheckedRadioButtonId()));
-        int position = mPositionInput.indexOfChild(findViewById(
-                mPositionInput.getCheckedRadioButtonId()));
-
         editor.putString("scouterName", scouterName);
-        editor.putInt("robotAlliance", alliance);
-        editor.putInt("robotPosition", position);
         editor.apply();
     }
 

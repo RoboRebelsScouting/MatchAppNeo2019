@@ -92,59 +92,12 @@
 
                     </android.support.design.widget.TextInputLayout>
 
-                    <LinearLayout
-                        android:id="@+id/robotPositionLayout"
+                    <TextView
+                        android:id="@+id/robotPositionIndicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <RadioGroup
-                            android:id="@+id/allianceInput"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/allianceBlue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/alliance_blue" />
-
-                            <RadioButton
-                                android:id="@+id/allianceRed"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/alliance_red" />
-                        </RadioGroup>
-
-                        <RadioGroup
-                            android:id="@+id/positionInput"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/position1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/position_1" />
-
-                            <RadioButton
-                                android:id="@+id/position2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/position_2" />
-
-                            <RadioButton
-                                android:id="@+id/position3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/position_3" />
-                        </RadioGroup>
-                    </LinearLayout>
-
+                        android:layout_marginTop="@dimen/padding"
+                        android:layout_marginBottom="@dimen/padding" />
 
                     <Button
                         android:id="@+id/button"

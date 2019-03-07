@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding"
+    android:paddingEnd="@dimen/padding"
     tools:context=".SandstormFragment">
 
     <TextView
@@ -19,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcsc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/teleopHeader" />
 
@@ -31,12 +34,62 @@
         app:layout_constraintTop_toTopOf="@+id/tcscLabel" />
 
     <TextView
+        android:id="@+id/tcshLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tcsh"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcscInput" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/tcshInput"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcshLabel" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.view.VerticalTextView
+        android:id="@+id/rocketLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rocket"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tcr1Label"
+        app:layout_constraintBottom_toBottomOf="@+id/thr3Label"/>
+
+    <ImageView
+        android:id="@+id/cargoIcon"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"
+        android:src="@drawable/ic_cargo"
+        app:layout_constraintStart_toEndOf="@id/rocketLabel"
+        app:layout_constraintTop_toTopOf="@+id/tcr1Label"
+        app:layout_constraintBottom_toBottomOf="@+id/tcr3Label"/>
+
+    <ImageView
+        android:id="@+id/hatchIcon"
+        android:layout_width="182dp"
+        android:layout_height="150dp"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"
+        android:src="@drawable/ic_hatch"
+        app:layout_constraintStart_toEndOf="@id/rocketLabel"
+        app:layout_constraintTop_toTopOf="@+id/thr1Label"
+        app:layout_constraintBottom_toBottomOf="@+id/thr3Label"/>
+
+    <TextView
         android:id="@+id/tcr1Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcr1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tcscInput" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/cargoIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tcshInput" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
         android:id="@+id/tcr1Input"
@@ -51,7 +104,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcr2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/tcr1Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
@@ -67,7 +121,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tcr3"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/cargoIcon"
         app:layout_constraintTop_toBottomOf="@+id/tcr2Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
@@ -79,28 +134,13 @@
         app:layout_constraintTop_toTopOf="@+id/tcr3Label" />
 
     <TextView
-        android:id="@+id/tcshLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tcsh"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tcr3Input" />
-
-    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
-        android:id="@+id/tcshInput"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tcshLabel" />
-
-    <TextView
         android:id="@+id/thr1Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/thr1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tcshInput" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/hatchIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tcr3Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
         android:id="@+id/thr1Input"
@@ -115,7 +155,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/thr2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/thr1Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
@@ -131,7 +172,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/thr3"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@id/hatchIcon"
         app:layout_constraintTop_toBottomOf="@+id/thr2Input" />
 
     <com.walpolerobotics.scouting.matchappneo2019.widget.Counter

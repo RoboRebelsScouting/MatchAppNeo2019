@@ -12,4 +12,16 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="BlueAllianceTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/bluePrimary</item>
+        <item name="colorPrimaryDark">@color/bluePrimaryDark</item>
+        <item name="colorAccent">@color/blueAccent</item>
+    </style>
+
+    <style name="RedAllianceTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/redPrimary</item>
+        <item name="colorPrimaryDark">@color/redPrimaryDark</item>
+        <item name="colorAccent">@color/redAccent</item>
+    </style>
+
 </resources>
