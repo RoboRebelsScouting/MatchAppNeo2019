@@ -73,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingBottom="@dimen/padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/robotConditionInputLabel">
 
@@ -96,6 +97,40 @@
             android:layout_height="wrap_content"
             android:text="@string/broken_climb" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/numFoulsInputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/num_fouls"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robotConditionInput" />
+
+    <com.walpolerobotics.scouting.matchappneo2019.widget.Counter
+        android:id="@+id/numFoulsInput"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/numFoulsInputLabel" />
+
+    <TextView
+        android:id="@+id/playedDefenseInputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/defense"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numFoulsInput"/>
+
+    <CheckBox
+        android:id="@+id/playedDefenseInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/played_defense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/playedDefenseInputLabel"/>
 
     <Button
         android:id="@+id/submitButton"

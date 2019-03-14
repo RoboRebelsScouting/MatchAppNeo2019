@@ -68,6 +68,11 @@
     <string name="broken_drive">Broken Drivetrain</string>
     <string name="broken_climb">Broken Climber</string>
 
+    <string name="num_fouls">Number of Fouls</string>
+
+    <string name="defense">Defense</string>
+    <string name="played_defense">Played defense?</string>
+
     <string name="splash_message">&#128515;\nMade in Walpole, Massachusetts by Team 1153</string>
 
 </resources>

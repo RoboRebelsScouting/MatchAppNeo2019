@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 
 import com.walpolerobotics.scouting.matchappneo2019.util.Match;
+import com.walpolerobotics.scouting.matchappneo2019.widget.Counter;
 
 public class EndGameFragment extends Fragment {
 
@@ -21,6 +22,8 @@ public class EndGameFragment extends Fragment {
     private CheckBox mBrokenCcInput;
     private CheckBox mBrokenDriveInput;
     private CheckBox mBrokenClimbInput;
+    private Counter mNumFoulsInput;
+    private CheckBox mPlayedDefenseInput;
 
     public EndGameFragment() {
         // Required empty public constructor
@@ -54,6 +57,8 @@ public class EndGameFragment extends Fragment {
         mBrokenCcInput = view.findViewById(R.id.brokenCc);
         mBrokenDriveInput = view.findViewById(R.id.brokenDrive);
         mBrokenClimbInput = view.findViewById(R.id.brokenClimb);
+        mNumFoulsInput = view.findViewById(R.id.numFoulsInput);
+        mPlayedDefenseInput = view.findViewById(R.id.playedDefenseInput);
 
         return view;
     }
@@ -85,14 +90,12 @@ public class EndGameFragment extends Fragment {
         int habClimbSelectedIndex = mHabClimbInput.indexOfChild(habClimbSelected);
         in.climb = habClimbSelectedIndex;
 
-        // TODO: Add actual inputs for the following values
-        in.numFouls = 0;
-        in.playedDefense = false;
-
         in.brokenHatchCollector = mBrokenHcInput.isChecked();
         in.brokenCargoCollector = mBrokenCcInput.isChecked();
         in.brokenDrivetrain = mBrokenDriveInput.isChecked();
         in.brokenClimber = mBrokenClimbInput.isChecked();
+        in.numFouls = mNumFoulsInput.getValue();
+        in.playedDefense = mPlayedDefenseInput.isChecked();
 
         return in;
     }
