@@ -127,7 +127,7 @@ public class MatchActivity extends AppCompatActivity
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, MODE_PRIVATE);
         in.matchNumber = prefs.getInt("matchNumber", 1);
         // TODO: Remove event hardcoding
-        in.eventName = "RIDE";
+        in.eventName = "WPI";
         in.scouterName = prefs.getString("scouterName", "");
         int alliance = prefs.getInt("robotAlliance", 0);
         int position = prefs.getInt("robotPosition", 0);
