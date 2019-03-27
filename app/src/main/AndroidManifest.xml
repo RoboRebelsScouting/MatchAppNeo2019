@@ -13,9 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MatchActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
+        <activity android:name=".SettingsActivity"></activity>
+        <activity
+            android:name=".MatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoToolbarTheme">
             <intent-filter>

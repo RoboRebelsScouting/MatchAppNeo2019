@@ -4,11 +4,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
-import android.support.text.emoji.EmojiCompat;
-import android.support.text.emoji.bundled.BundledEmojiCompatConfig;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.textfield.TextInputLayout;
+import androidx.emoji.text.EmojiCompat;
+import androidx.emoji.bundled.BundledEmojiCompatConfig;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.proceed, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -136,9 +136,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setEnabled(false);
+                })
+                .create()
+                .show();
     }
 }

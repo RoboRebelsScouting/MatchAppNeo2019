@@ -1,15 +1,18 @@
 package com.walpolerobotics.scouting.matchappneo2019.room;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(primaryKeys = {"matchNumber","eventKey"})
 public class Match {
-    @PrimaryKey
+    @ColumnInfo(name = "matchNumber")
+    @NonNull
     public int matchNumber;
 
-    @PrimaryKey
+    @ColumnInfo(name = "eventKey")
+    @NonNull
     public String eventKey;
 
     @ColumnInfo(name = "type")
