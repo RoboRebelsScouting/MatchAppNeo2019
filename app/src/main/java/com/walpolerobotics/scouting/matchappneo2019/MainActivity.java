@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
-import android.support.text.emoji.EmojiCompat;
-import android.support.text.emoji.bundled.BundledEmojiCompatConfig;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -30,11 +28,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        EmojiCompat.Config config = new BundledEmojiCompatConfig(getApplicationContext());
-        config.setReplaceAll(true);
-        EmojiCompat.init(config);
-
         setContentView(R.layout.activity_main);
 
         mMatchNumberLayout = findViewById(R.id.matchNumberLayout);
